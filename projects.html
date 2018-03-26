@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+	
+	<meta name="author" content="Emmet Mack">
+	<meta name="keywords" content= "resumé, Carnegie Mellon University, CV, Information Systems">
+	<meta name ="description" content = "Emmet Mack Professional Website">
+	
+	<title>Emmet Mack's Website</title>
+	
+	<link rel="stylesheet" media="all" type="text/css" href ="css/styles.css" />
+	<link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css" />
+	<link rel="stylesheet" media="all" type="text/css" href="css/jquery.lightbox.css" />
+	
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/jquery.lightbox.min.js"></script>
+
+	<script>
+		$(function(){
+			$( "#accordion" ).accordion();
+		});
+	</script>
+	<script>
+		$(function() {
+			$("#tabs").tabs({
+				event: "mouseover"
+			});
+		});
+	</script>
+		
+	<script type="text/javascript">
+		$(function(){
+			$("#gallery a").lightBox();
+		});
+	</script>
+		
+</head>
+<body>
+	<div id="container">
+		<div id="top_row">	
+			<header>
+				<h1>Emmet Mack</h1>
+				<h2>Carnegie Mellon University, Information Systems</h2>
+			</header>
+
+			<nav>
+				<a href="index.html">About</a>
+				<a href="projects.html" class="selected">Projects</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+		</div>
+		<div id ="content">
+			<h3>Projects</h3>
+			<div style="overflow-x:auto;">
+				<div id="accordion">
+					<h4> Case Analysis Project</h4>
+					<div><p>
+						In this project we looked at the company SmoothPay. SmoothPay is a mobile-payment company that is based in Canada. We looked at SmoothPay to analyze their current business model, strategies, and processes. We then offered suggestions on how to best improve the company and help it grow into the future.
+					</p></div>
+					<h4> Web Development Project</h4>
+					<div><p>
+						For this project we developed a website for a famous Pittsburgh business: Prantl's Bakery. This project taught us how to design, develop, and code a front-end website. It taught a lot about the whole process and was educational. 
+					</p></div>
+					<h4>Database Project</h4>
+					<div><p>
+						For this project, we were tasked with modeling important business data and to create a database that performs this function.
+					</p>
+					<ul>
+						<li>Data</li>
+						<li>Model</li>
+						<li>Output</li>
+					</ul>
+					</div>
+				</div>
+				<div id="tabs">
+					<ul>
+						<li><a href="#tabs-1">Case Analysis Project</a></li>
+						<li><a href="#tabs-2">Web Dev Project</a></li>
+						<li><a href="#tabs-3">Database Project</a></li>
+					</ul>
+					
+					<div id="tabs-1">
+						<p>In this project we looked at the company SmoothPay. SmoothPay is a mobile-payment company that is based in Canada. We looked at SmoothPay to analyze their current business model, strategies, and processes. We then offered suggestions on how to best improve the company and help it grow into the future.</p>
+					</div>
+					
+					<div id ="tabs-2">
+						<p>For this project we developed a website for a famous Pittsburgh business: Prantl's Bakery. This project taught us how to design, develop, and code a front-end website. It taught a lot about the whole process and was educational.</p>
+					</div>
+					
+					<div id="tabs-3">
+						<p>For this project, we were tasked with modeling important business data and to create a database that performs this function.</p>
+					</div>
+					<div id="content-gallery">
+						<p>Click on the thumbnail to see full image and description</p>
+						<div id="gallery">
+							<div id="galleryThumbnail"><div id="thmbnlShadow">
+							<a href="images/image1.jpg" title="The case analysis project evaluated
+							enterprise concepts at SmoothPay.">
+							<img src="images/image1thumb.jpg" alt="image 1"/></a></div></div>
+							
+							<div id="galleryThumbnail"><div id="thmbnlShadow">
+							<a href="images/image2.jpg" title="The web development project
+							utilized several front-end web development techniques using HTML, CSS, and JavaScript">
+							<img src="images/image2thumb.jpg" alt="image 2"/></a></div></div>
+							
+							<div id="galleryThumbnail"><div id="thmbnlShadow">
+							<a href="images/image3.jpg" title="The database project included an 
+							entity relationship diagram and several data creation and manipulation techniques in MySQL">
+							<img src="images/image3thumb.jpg" alt="image 3"/></a></div></div>
+				</div>
+				<table border ="4">
+					<tr>
+						<th colspan="3">Course Projects</th>
+					</tr>
+					<tr>
+						<th>Title</th>
+						<th>Course</th>
+						<th>Semester</th>
+					</tr>
+					<tr onmouseover="showDescription('In the Case Analysis Project, we analyzed mobile payment company SmoothPay and offered suggestions about how to improve their business.');" onmouseout="hideDescription();">
+						<td>Case Anaylsis Project</td>
+						<td>67-250</td>
+						<td>Spring 2018</td>
+					</tr>
+					<tr onmouseover="showDescription('In the Web Development Project, we applied our new web development skills to create a website for a real-world business.');" onmouseout="hideDescription();">
+						<td>Web Development Project</td>
+						<td>67-250</td>
+						<td>Spring2018</td>
+					</tr>
+					<tr onmouseover="showDescription('In the Database Project, we learned how to model data from real life companies.');" onmouseout="hideDescription();">
+						<td>Database Project</td>
+						<td>67-250</td>
+						<td>Spring 2018</td>
+					</tr>
+				</table>
+				<div id="description"></div>
+			</div>
+		</div>
+	
+		<div id ="sidebar">
+			<h3>Find Me</h3>
+			Emmet Mack </br>
+			<a href="http://www.cmu.edu">Carnegie Mellon University</a><br/>
+			315-246-0219<br/>
+			<a href="mailto:emack@andrew.cmu.edu"><img src="images/email.png"></a>
+			<a href="https://www.linkedin.com/"><img src="images/linkedin.png"></a>
+			<a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
+		</div>
+	
+		<footer>
+			<hr/>
+			&copy; Emmet Mack 2018<br/>
+			<a href="mailto:emack@andrew.cmu.edu">Email Me</a>
+			<a href="http://cmu.edu" target="_blank">Carnegie Mellon University</a>
+		</footer>
+	</div>
+</body>
+
+</hmtl>

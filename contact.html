@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+	
+	<meta name="author" content="Emmet Mack">
+	<meta name="keywords" content= "resumé, Carnegie Mellon University, CV, Information Systems">
+	<meta name ="description" content = "Emmet Mack Professional Website">
+	
+	<title>Emmet Mack's Website</title>
+
+	<link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#container-graph").highcharts({
+
+			    title: {
+			        text: 'Weekly Workload by Month'
+			    },
+			    yAxis: {
+			        title: {
+			            text: 'Average hours worked each week'
+			        }
+			    },
+				xAxis: {
+					title: {
+						text: "Months"
+					},
+					categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+				},
+				tooltip: {
+					valueSuffix: ' hours per week (on average)'
+				},
+			    legend: {
+			        layout: 'vertical',
+			        align: 'right',
+			        verticalAlign: 'middle'
+			    },
+				
+			    series: [{
+			        name: '2012',
+			        data: [2, 4, 3, 10, 12, 12, 12, 10, 4, 4, 2, 6]
+			    }, {
+			        name: '2013',
+			        data: [5, 7, 9, 10, 10, 15, 12, 8, 7, 6, 3, -1]
+			    }, {
+			        name: '2014',
+			        data: [-2, 5, 8, 10, 12, 20, 15, 12, 4, 6, 5, 4]
+			    }, {
+			        name: '2015',
+			        data: [0, 3, 6, 2, 1, 10, 23, 12, 5, 11, 6, 7]
+			    }, {
+			        name: '2016',
+			        data: [-4, 1, 2, 5, 3, 7, 8, 5, 5, 16, 12, 10]
+			    }],
+			});
+
+		});
+	</script>
+</head>
+
+<body>
+	<div id="container">
+		<div id="top_row">
+			<header>
+				<h1>Emmet Mack</h1>
+				<h2>Carnegie Mellon University, Information Systems</h2>
+			</header>
+
+			<nav>
+				<a href="index.html">About</a>
+				<a href="projects.html">Projects</a>
+				<a href="contact.html" class="selected">Contact</a>
+			</nav>
+		</div>
+
+		<div id ="content">
+			<h3>Contact</h3>
+			<p>Please use the below map to find me</p>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.4726175986366!2d-79.94423606817018!3d40.44267537936206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f21f0b642f95%3A0xc30de693a6fd1a29!2sDonner+House!5e0!3m2!1sen!2sus!4v1520458362493" width="600" height="450" frameborder="0" style="border:0" allhref="contact.html" title="contact" owfullscreen>
+			</iframe>
+			<div id="container-graph"></div>
+			<form onsubmit="return validate()">
+				<fieldset>
+					<legend>Tell me more about yourself...</legend> 
+					<label>Name:</label><br/>
+					<input type ="text" name="yourname" value="Your Name." maxlength="250"><br/>
+					<label>Your date of birth:</label><br/>
+					<input type="text" name="birthday" id="dob" value="mm/dd/yyyy" required>
+				</fieldset>
+				<fieldset>
+					<legend>Tell me about your preferences...</legend>
+					<label>Your favorite flower color</label><br/>
+					<input type="color" name="prefcolor"><br/>
+					<label>Message:</label><br/>
+					<textarea name="message" rows="10" cols="50" maxlength="1000" required></textarea><br/>
+				</fieldset>
+				<fieldset>
+					<legend>Let's stay in touch...</legend>
+					<label>How did you find out about me?</label><br/>
+					<select name="choices">
+						<option value="Google" selected>Google</option>
+						<option value="News Article">News Article</option>
+						<option value="Friend">Friend</option>
+						<option value="Other">Other</option>
+					</select><br/>
+					<label>Please indicate if you want to receive updates via email</label><br/>
+					<input type="checkbox" name="wantemail">Yes, Please update me!<br/>
+					<label>Please provide your email address.</label><br/>
+					<input type ="email" name="email" value="abc@defg.com"><br/>
+					<label>Please enter your phone number (no dashes or spaces please)</label><br/>
+					<input type ="text" id="phone" required><br/>
+					<label>Choose a password</label>
+					<br/>
+					<input type="password" name="pswd" maxlength="20"><br/>
+				</fieldset>
+				<fieldset>
+					<input type="image" src ="images/submit.png"><br/>
+				</fieldset>
+			</form>
+		</div>
+
+		<div id ="sidebar">
+			<h3>Find Me</h3>
+			Emmet Mack </br>
+			<a href="http://www.cmu.edu">Carnegie Mellon University</a><br/>
+			315-246-0219<br/>
+			<a href="mailto:emack@andrew.cmu.edu"><img src="images/email.png"></a>
+			<a href="https://www.linkedin.com/"><img src="images/linkedin.png"></a>
+			<a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
+
+			<footer>
+				<hr/>
+				&copy; Emmet Mack 2018<br/>
+				<a href="mailto:emack@andrew.cmu.edu">Email Me</a>
+				<a href="http://cmu.edu" target="_blank">Carnegie Mellon University</a>
+			</footer>
+	</div>
+</body>
+
+</hmtl>
